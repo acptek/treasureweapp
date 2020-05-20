@@ -1,0 +1,8 @@
+/* pages/settings_device/device.wxss */
+.infoarea {
+  margin-top: 30rpx;
+}
+
+.down {
+  margin-top: 50rpx;
+}

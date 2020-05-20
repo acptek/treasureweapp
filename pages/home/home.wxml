@@ -1,0 +1,42 @@
+<!--pages/home/home.wxml-->
+<page-meta>
+  <navigation-bar title="首页"/>
+</page-meta>
+
+<view class="homepage">
+  <view class="home_top">
+    <text class="top_text">实时体温</text>
+    <view class="top_body">
+      <view wx:if="{{is_alert}}" class="top_body_circle" style="background:rgb(255, 80, 80); box-shadow:0 0 8rpx 8rpx rgb(255, 80, 80)">
+        <text class="top_body_text">{{cur_tem}}</text>
+      </view>
+      <view wx:else class="top_body_circle" style="background:rgb(122, 248, 179); box-shadow:0 0 8rpx 8rpx rgb(122, 248, 179)">
+        <text class="top_body_text">{{cur_tem}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="home_down">
+    <navigator url="/pages/home_parent/parent">
+      <view class="home_down_item">
+        <view class="home_down_item_left">
+          <image class="home_down_item_png" src="/static/images/couple.png"></image>
+          <text>监护人</text>
+        </view>
+        <view class="home_down_item_right">
+          <text class="down_item_text">{{parent}}</text>
+          <image class="home_down_item_arrow" src="/static/images/arrow-point-to-right.png"></image>
+        </view>
+      </view>
+    </navigator>
+    <view class="home_down_item">
+      <view class="home_down_item_left">
+        <image class="home_down_item_png" src="/static/images/battery.png"></image>
+        <text>体温贴剩余电量</text>
+      </view>
+      <view class="home_down_item_right">
+        <text class="down_item_text">{{battery}}</text>
+        <image class="home_down_item_arrow" src=""></image>
+      </view>
+    </view>
+  </view>
+</view>

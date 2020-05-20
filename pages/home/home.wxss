@@ -1,0 +1,81 @@
+/* pages/home/home.wxss */
+page {
+  background: #f4f4f4;
+}
+
+.homepage {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.home_top {
+  height: 600rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top_text {
+  text-align:center;   
+  font-family:helvetica,arial,sans-serif;
+  font-weight:bold;   
+  color:#fff;
+  text-shadow:0.1em 0.1em 0.5em black;
+  font-size: 20px;
+  margin: 40rpx;
+}
+
+.top_body_circle {
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  height: 400rpx;
+  width: 400rpx;
+  justify-content: center;
+  vertical-align: top;
+}
+
+.top_body_text {
+  font-size: 28px;
+  color: #FFFFFF;
+  height: 20rpx;
+  line-height: 20rpx;
+}
+
+.home_down {
+  margin-top: 200rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.home_down_item {
+  margin: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home_down_item_left {
+  height: 40rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.home_down_item_png {
+  margin: 0rpx 20rpx 0rpx 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.home_down_item_arrow {
+  width: 20rpx;
+  height: 20rpx;
+  margin: 10rpx;
+  margin-left: 30rpx;
+}
+
+.down_item_text {
+  color: gray;
+}

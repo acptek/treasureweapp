@@ -1,0 +1,16 @@
+{
+  "name": "treasure",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "miniprogram-sm-crypto": "^0.1.0",
+    "wx-miniprogram-actionsheet": "^1.0.7",
+    "wx-miniprogram-modal": "^1.0.7"
+  }
+}

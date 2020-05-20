@@ -1,0 +1,52 @@
+<!--pages/user/user.wxml-->
+<page-meta>
+  <navigation-bar title="我的"/>
+</page-meta>
+
+<view class="home_down">
+  <view class="home_down_item">
+    <view class="home_down_item_left">
+      <text>用户名</text>
+    </view>
+    <view class="home_down_item_right">
+      <text class="down_item_text">{{username}} </text>
+      <image class="home_down_item_arrow" src=""></image>
+    </view>
+  </view>
+  
+  <view bindtap="bindtapPhone">
+    <view class="home_down_item">
+      <view class="home_down_item_left">
+        <text>绑定手机</text>
+      </view>
+      <view class="home_down_item_right">
+        <text class="down_item_text">{{cur_num}} </text>
+        <image class="home_down_item_arrow" src="/static/images/arrow-point-to-right.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <view bindtap="bindtapEmail">
+    <view class="home_down_item">
+      <view class="home_down_item_left">
+        <text>绑定邮箱</text>
+      </view>
+      <view class="home_down_item_right">
+        <text class="down_item_text">{{cur_add}} </text>
+        <image class="home_down_item_arrow" src="/static/images/arrow-point-to-right.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="btnArea">
+  <button class="btn" type="default" style="font-size: 25rpx;" bindtap="loginout">退出登录</button>
+</view>
+
+<modal hidden="{{hidebindphone}}" title="更改绑定手机号码" confirm-text="更改" cancel-text="取消" bindcancel="cancelPhone" bindconfirm="confirmPhone">
+  <input bindinput="inputPhoneNum" type='number' placeholder="请输入手机号码..." value="{{phoneNum}}" style="border:1rpx solid gray; padding:10rpx"/>
+</modal>
+
+<modal hidden="{{hidebindemail}}" title="更改绑定邮箱" confirm-text="更改" cancel-text="取消" bindcancel="cancelEmail" bindconfirm="confirmEmail">
+  <input bindinput="inputEmailAdd" type='email' placeholder="请输入邮箱地址..." value="{{emailAdd}}" style="border:1rpx solid gray; padding:10rpx"/>
+</modal>

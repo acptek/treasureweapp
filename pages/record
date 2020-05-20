@@ -1,0 +1,28 @@
+已完成
+// app.js -> init_query --
+          -> queryTemperature
+          -> 当前登录用户绑定
+// 页面的自动刷新 --
+// user.js -> postRequest --
+           -> username : userinfo
+// settings.js -> postRequest (maxalert , minalert) --
+    settings.wxml -> animation
+// register: 返回数据的格式 --
+// login: 返回数据的格式
+
+
+计划完成
+// settings -> 移除设备停止定时器
+// home.js -> 剩余电量 （可以设置多个定时器） 
+// home_parent.js -> postRequest
+// token 过期
+// 出错或退出 -》 清空计时器
+
+// 退出登录 -> 要将temp置为0 // 添加体温贴，删除体温贴
+
+
+
+要求
+// user必须有温度上下限的初始值，最高值不低于37最低值不高于37
+// 监护人信息 , 获取和更新
+// 设备初始电量

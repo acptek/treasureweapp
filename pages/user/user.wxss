@@ -1,0 +1,43 @@
+/* pages/user/user.wxss */
+
+/* pages/settings/settings.wxss */
+.home_down {
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.home_down_item {
+  margin: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home_down_item_left {
+  height: 40rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.home_down_item_png {
+  margin: 0rpx 20rpx 0rpx 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.home_down_item_arrow {
+  width: 20rpx;
+  height: 20rpx;
+  margin: 10rpx;
+}
+
+.down_item_text {
+  font-size: 14px;
+  color: gray;
+}
+
+.btnArea {
+  margin-top: 60rpx;
+}

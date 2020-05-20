@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "mymodal": "../../miniprogram_npm/wx-miniprogram-modal/index"
+  }
+}

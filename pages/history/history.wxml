@@ -1,0 +1,71 @@
+<!--pages/history/history.wxml-->
+<page-meta>
+  <navigation-bar title="历史数据"/>
+</page-meta>
+
+<view class='g_con'>
+  <view class="pagechange">
+    <view wx:if="{{text}}" class="pagechange_layout">
+     <button class="pagechange_btn_left" style="background:{{text_chart_color[0]}}; color:{{text_chart_color[1]}}" bindtap="converttotext">文本</button>
+     <button class="pagechange_btn_right" style="background:{{text_chart_color[1]}}; color:{{text_chart_color[0]}}" bindtap="converttochart">图表</button>
+    </view>
+    <view wx:else class="pagechange_layout">
+     <button class="pagechange_btn_left" style="background:{{text_chart_color[1]}}; color:{{text_chart_color[0]}}" bindtap="converttotext">文本</button>
+     <button class="pagechange_btn_right" style="background:{{text_chart_color[0]}}; color:{{text_chart_color[1]}}" bindtap="converttochart">图表</button>
+    </view>
+  </view>
+
+  <view wx:if="{{text}}">
+    <view class='topExpress'>
+      <view class='topExpress-left'>
+        <image src='{{cur_info}}' style='width:60rpx;height:60rpx;border-radius:50%;'></image>
+      </view>
+      <view class='topExpress-right'>
+        <view class='topExpress-right-top'>当前温度：{{history[0].temperature}}</view>
+        <view class='topExpress-right-middle'>体温：
+          <text wx:if="{{history[0].alertinfo}}">异常</text>
+          <text wx:else>正常</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="body">
+      <view wx:for='{{history}}' wx:for-index="indexs" wx:for-item="items" wx:key="indexs">
+        <navigator url="/pages/history_specify/specify?id={{ }}">
+          <view class="body_item">
+            <view class="body_item_left">
+              <view class="body_item_left_layout">
+                <image wx:if="{{items.alertinfo}}" class="body_item_left_layout_png" src="{{alert_png}}"></image>
+              </view>
+              <text class="body_item_left_text">{{items.temperature}}</text>
+            </view>
+            <!-- <view class="body_item_middle">
+              <view class="body_item_middle_left">
+                <view class="dashedline"></view>
+                <view class="midline"></view>
+                <view class="dashedline"></view>
+              </view>
+              <view class="body_item_middle_right">
+                <text>{{cur_tem}}</text>
+              </view>
+            </view> -->
+            <view class="body_item_right">
+              <text class="body_item_right_text">{{items.time}}</text>
+              <image class="body_item_right_png" src="/static/images/arrow-point-to-right.png"></image>
+            </view>
+          </view>
+        </navigator>
+      
+      </view>
+
+      
+      
+    </view>
+  </view>
+
+  <view wx:else>
+    <text>chart</text>
+  </view>
+
+
+ </view>

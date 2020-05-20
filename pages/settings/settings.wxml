@@ -1,0 +1,94 @@
+<!--pages/settings/settings.wxml-->
+<page-meta>
+  <navigation-bar title="设置"/>
+</page-meta>
+
+<view class="home_down">
+  <navigator url="/pages/settings_device/device">
+    <view class="home_down_item">
+      <view class="home_down_item_left">
+        <text>测温贴序列号</text>
+      </view>
+      <view class="home_down_item_right">
+        <text class="down_item_text">{{curdevice}} </text>
+        <image class="home_down_item_arrow" src="/static/images/arrow-point-to-right.png"></image>
+      </view>
+    </view>
+  </navigator>
+
+  <navigator url="/pages/settings_interval/interval">
+    <view class="home_down_item" bindtap="setInterval">
+      <view class="home_down_item_left">
+        <text>记录间隔</text>
+      </view>
+      <view class="home_down_item_right">
+        <text class="down_item_text">{{recordInterval}} min </text>
+        <image class="home_down_item_arrow" src="/static/images/arrow-point-to-right.png"></image>
+      </view>
+    </view>
+  </navigator>
+
+  <view bindtap="setMaxAlert">
+    <view class="home_down_item">
+      <view class="home_down_item_left">
+        <text>温度告警上限</text>
+      </view>
+      <view class="home_down_item_right">
+        <text class="down_item_text">{{maxAlertTem}} °C </text>
+        <image class="home_down_item_arrow" src="/static/images/arrow-point-to-right.png"></image>
+      </view>
+    </view>
+  </view>
+
+   <view bindtap="setMinAlert">
+    <view class="home_down_item">
+      <view class="home_down_item_left">
+        <text>温度告警下限</text>
+      </view>
+      <view class="home_down_item_right">
+        <text class="down_item_text">{{minAlertTem}} °C </text>
+        <image class="home_down_item_arrow" src="/static/images/arrow-point-to-right.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="animation-element-wrapper" animation="{{animation}}" style="visibility:{{show ? 'visible':'hidden'}}">
+  <view class="animation-element">
+    <view class="top">
+      <button class="left-bt" type="default" size="mini" style="font-size: 12px; background:#aaa; color:#fff" bindtap="cancelModify">取消</button>
+      <button class="right-bt" type="primary" size="mini" style="font-size: 12px;" bindtap="deterModify">确定</button>
+    </view>
+    <view class="line"></view>
+    <view class="body">
+      <picker-view indicator-style="height: 50rpx;" style="width: 100%; height: 300rpx;" value="{{value}}" bindchange="bindChange">
+        <picker-view-column>
+          <view wx:for="{{integer}}" wx:key="{{integer}}" style="line-height: 50px; text-align: center;">{{item}} .</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{decimal}}" wx:key="{{decimal}}" style="line-height: 50px; text-align: center;">{{item}} °C</view>
+        </picker-view-column>
+      </picker-view>
+    </view>
+  </view>
+</view>
+
+<view class="animation-element-wrapper" animation="{{animation}}" style="visibility:{{show_min ? 'visible':'hidden'}}">
+  <view class="animation-element">
+    <view class="top">
+      <button class="left-bt" type="default" size="mini" style="font-size: 12px; background:#aaa; color:#fff" bindtap="cancelModify_min">取消</button>
+      <button class="right-bt" type="primary" size="mini" style="font-size: 12px;" bindtap="deterModify_min">确定</button>
+    </view>
+    <view class="line"></view>
+    <view class="body">
+      <picker-view indicator-style="height: 50rpx;" style="width: 100%; height: 300rpx;" value="{{value}}" bindchange="bindChange_min">
+        <picker-view-column>
+          <view wx:for="{{integer_min}}" wx:key="{{integer_min}}" style="line-height: 50px; text-align: center;">{{item}} .</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{decimal_min}}" wx:key="{{decimal_min}}" style="line-height: 50px; text-align: center;">{{item}} °C</view>
+        </picker-view-column>
+      </picker-view>
+    </view>
+  </view>
+</view>

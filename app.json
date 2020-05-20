@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/settings/settings",
+    "pages/user/user",
+    "pages/history/history",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/settings_interval/interval",
+    "pages/settings_device/device",
+    "pages/home_parent/parent",
+    "pages/history_specify/specify",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/reset/reset"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Treasure",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/static/images/tabBar/home.png",
+        "selectedIconPath": "/static/images/tabBar/home_selected.png"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "text": "历史数据",
+        "iconPath": "/static/images/tabBar/statistical.png",
+        "selectedIconPath": "/static/images/tabBar/statistical_selected.png"
+      },
+      {
+        "pagePath": "pages/settings/settings",
+        "text": "设置",
+        "iconPath": "/static/images/tabBar/settings.png",
+        "selectedIconPath": "/static/images/tabBar/settings_selected.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/static/images/tabBar/user.png",
+        "selectedIconPath": "/static/images/tabBar/user_selected.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

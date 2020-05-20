@@ -1,0 +1,22 @@
+<!--pages/settings_device/device.wxml-->
+
+<view class="container">
+  <view class="up">
+    <view class="up_title">
+      <text>当前绑定的设备：{{device_name}}</text>
+    </view>
+    <view class="up_content">
+      <view class="infoarea">
+        <textarea style="border:1rpx gray; background: #eee;" disabled="disabled">设备信息...</textarea>
+      </view>
+    </view>
+  </view>
+  <view class="down">
+    <button class="btn" type="warn" style="font-size: 25rpx;" bindtap="deleteDevice">删除设备</button>
+  </view>
+</view>
+
+
+<view>
+    <button class="btn" type="primary" style="font-size: 25rpx;" bindtap="addDevice">扫码添加设备</button>
+</view>

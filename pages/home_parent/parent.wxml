@@ -1,0 +1,46 @@
+<page-meta>
+  <navigation-bar title="监护人信息"/>
+</page-meta>
+
+<form bindsubmit="formSubmit">
+    <view wx:if="{{modify}}">
+        <view class="input">
+            <view class="input_left">监护人姓名</view>
+            <input class="input_mid" name="name" placeholder="输入监护人姓名" value="{{parent.name}}" style="border-bottom: black 1rpx solid;"/>
+        </view>
+        
+        <view class="input">
+            <view class="input_left">监护人号码</view>
+            <input class="input_mid" name="phone" placeholder="输入监护人号码" value="{{parent.phone}}" style="border-bottom: black 1rpx solid;"/>
+        </view>
+        
+        <view class="input">
+            <view class="input_left">其它的信息</view>
+            <input class="input_mid" name="info" placeholder="输入其他信息" value="{{parent.info}}" style="border-bottom: black 1rpx solid;"/>
+        </view>
+        <view class="in_modify">
+            <button class="btn" type="default" size="mini" style="font-size: 12px; background:#aaa; color:#fff" bindtap="cancelModify">取消</button>
+            <button class="btn" formType="submit" type="primary" size="mini" style="font-size: 12px;">保存</button>
+        </view>
+    </view>
+    <view wx:else>
+        <view class="input">
+            <view class="input_left">监护人姓名</view>
+            <input class="input_mid" name="name" placeholder="待设置" value="{{parent.name}}" style="color:gray" disabled="true"/>
+        </view>
+        
+        <view class="input">
+            <view class="input_left">监护人号码</view>
+            <input class="input_mid" name="phone" placeholder="待设置" value="{{parent.phone}}" style="color:gray" disabled="true"/>
+        </view>
+        
+        <view class="input">
+            <view class="input_left">其它的信息</view>
+            <input class="input_mid" name="info" placeholder="待设置" value="{{parent.info}}" style="color:gray" disabled="true"/>
+        </view>
+
+        <view class="modify">
+            <button class="btn" type="default" size="mini" style="font-size: 12px;" bindtap="changeModify">修改</button>
+        </view>
+    </view>
+</form>
